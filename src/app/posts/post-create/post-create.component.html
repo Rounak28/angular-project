@@ -1,0 +1,24 @@
+<mat-card>
+<form (submit)="onAddPost(postForm)" #postForm="ngForm">
+<mat-form-field>
+  <input matInput
+  type="text"
+  name="title"
+   ngModel
+   placeholder="Title"
+   required/>
+</mat-form-field>
+<mat-form-field>
+    <input matInput
+     type="text"
+     name="content"
+     ngModel
+     placeholder="Content"
+     required/>
+</mat-form-field>
+<button
+mat-raised-button
+type="submit">Post</button>
+<!--<p>{{ newPost }}</p>-->
+</form>
+</mat-card>
