@@ -38,6 +38,7 @@ export class PostCreateComponent implements OnInit {
     }
     if (this.mode === 'create') {
     this.postService.addPost(form.value.title, form.value.content);
+    console.log('form.value.title===', form.value.title);
     } else if (this.mode === 'edit') {
       this.postService.updatePost(this.postId, form.value.title, form.value.content);
     }

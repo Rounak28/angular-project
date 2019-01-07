@@ -32,7 +32,9 @@ app.post("/api/posts/",(req,res,next) => {
     res.status(201).json({  // OK - new resource created
       message: 'Post added successfully',
       postId: result.id
-    })
+    }).catch(err => {
+      res.err(err);
+    });
   });
 });
 
